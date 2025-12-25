@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>TopFirms - Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="dashboard-sidebar" id="dashboardSidebar">
+        <div class="dashboard-brand">
+          <button class="dashboard-sidebar-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <a class="logo">My Dashboard</a>
+        </div>
+        <nav class="sidebar-nav">
+          <ul class="primary-nav nav-list">
+            <li class="nav-item active">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-table-columns nav-icon"></i>
+                <span class="nav-label">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-folder nav-icon"></i>
+                <span class="nav-label">Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-chart-simple nav-icon"></i>
+                <span class="nav-label">Reports</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-solid fa-gear nav-icon"></i>
+                <span class="nav-label">Settings</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="secondary-nav nav-list">
+            <li class="nav-item btn btn-secondary">
+              <a href="#" class="nav-link sidebar-back-button">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span class="nav-label">Back to site</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- Overlay -->
+      <div class="dashboard-sidebar-overlay" id="dashboardSidebarOverlay"></div>
+
+      <!-- Main Dashboard -->
+      <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+          <!-- Header Content -->
+          <div class="dashboard-header-content">
+            <button class="dashboard-sidebar-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <h1 class="dashboard-header-title" id="dashboardTitle">Overview</h1>
+          </div>
+          <!-- Search Container -->
+          <div class="search-container" id="searchContainer">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input
+              type="search"
+              class="search-input form-input"
+              placeholder="Search projects, tasks, reports..."
+              id="searchInput"
+            />
+            <button class="search-close btn" id="searchClose">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <div class="dashboard-header-actions">
+            <!-- ! Mobile Search Button -->
+            <button class="mobile-search-btn btn" id="mobileSearchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <div class="notification-button">
+              <i class="fa-regular fa-bell"></i>
+              <div class="notification-badge">3</div>
+            </div>
+
+            <!-- User Profile -->
+            <div class="user-menu dropdown">
+              <div class="user-menu-trigger dropdown-toggle">
+                <div class="user-avatar-small">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face&auto=format"
+                    alt="User Avatar"
+                  />
+                </div>
+              </div>
+              <div class="user-menu-dropdown dropdown-menu">
+                <a href="#" class="user-menu-item">
+                  <i class="fa-solid fa-user icon"></i>
+                  <span>Profile</span>
+                </a>
+                <!-- Theme Toggle inside dropdown -->
+                <div class="user-menu-item theme-item">
+                  <i class="fa-solid fa-palette icon"></i>
+                  <div class="theme-toggle" id="theme-toggle">
+                    <div class="theme-option active" data-theme="light">
+                      Light
+                    </div>
+                    <div class="theme-option" data-theme="dark">Dark</div>
+                  </div>
+                </div>
+                <a href="#" class="user-menu-item">
+                  <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                  <span>Sign Out</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="dashboard-content">
+          <div class="dashboard-view">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <div class="stat-card-title">Total Projects</div>
+                  <div class="stat-card-icon primary">
+                    <i class="fa-regular fa-folder"></i>
+                  </div>
+                </div>
+                <div class="stat-card-value">12</div>
+                <div class="stat-card-change positive">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <span>+2 this week</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <div class="stat-card-title">Completed Tasks</div>
+                  <div class="stat-card-icon success">
+                    <i class="fa-regular fa-circle-check"></i>
+                  </div>
+                </div>
+                <div class="stat-card-value">48</div>
+                <div class="stat-card-change positive">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <span>+15% from last week</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <div class="stat-card-title">Pending Tasks</div>
+                  <div class="stat-card-icon warning">
+                    <i class="fa-regular fa-clock"></i>
+                  </div>
+                </div>
+                <div class="stat-card-value">23</div>
+                <div class="stat-card-change negative">
+                  <i class="fa-solid fa-arrow-trend-down"></i>
+                  <span>-3 from last week</span>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card-header">
+                  <div class="stat-card-title">Team Members</div>
+                  <div class="stat-card-icon info">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                </div>
+                <div class="stat-card-value">8</div>
+                <div class="stat-card-change positive">
+                  <i class="fa-solid fa-arrow-trend-up"></i>
+                  <span>+1 new member</span>
+                </div>
+              </div>
+            </div>
+            <!-- Charts -->
+            <div class="chart-grid">
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Project Progress</h3>
+                  <p class="chart-card-subtitle">Completion rate over time</p>
+                </div>
+                <div class="chart-container">
+                  <div id="progressChart"></div>
+                </div>
+              </div>
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h3 class="chart-card-title">Task Distribution</h3>
+                  <p class="chart-card-subtitle">Tasks by category</p>
+                </div>
+                <div class="chart-container">
+                  <div id="categoryChart"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content View -->
+          <!-- <div class="dashboard-view active" id="projects">
+            <div class="empty-state">
+              <div class="empty-state-icon">
+                <i class="fa-regular fa-folder"></i>
+              </div>
+              <h3 class="empty-state-title">Projects</h3>
+              <p class="empty-state-description">Manage your projects here. Create new projects, track progress, and collaborate with your team.</p>
+            </div>
+          </div> -->
+        </div>
+      </main>
+    </div>
+  </body>
+  <!-- ! Apexcharts Cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="script.js"></script>
+  <script src="charts.js"></script>
+ 
+</html>
