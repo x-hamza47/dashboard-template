@@ -36,7 +36,7 @@ var progressOptions = {
   fill: {
     type: "solid",
     colors: ["#65A30D"],
-    opacity: 0.1,
+    opacity: 0.2,
   },
   xaxis: {
     categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
